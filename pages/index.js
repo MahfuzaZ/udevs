@@ -1,5 +1,8 @@
 import Head from 'next/head'
-import sass from '../styles/Home.module.scss'
+import sass from '../styles/home.module.scss'
+import Image from 'next/image'
+import logo from '../public/logo.svg'
+import showcase from '../public/showcase.svg'
 
 export default function Home() {
   return (
@@ -11,11 +14,54 @@ export default function Home() {
       </Head>
 
       <header>
-        <div className={sass.left}> 
-           
-        </div>
-        <div className={sass.right}> </div>
+           <div className={sass.container}>
+            <div className={sass.left}> 
+        <Image
+            src={logo}
+            width={96}
+            height={38}
+            alt="logo"
+    />
+            </div>
+             <div className={sass.right}>
+          <ul>
+            <a href=''><li>Услуги</li></a>
+            <a href=''><li>Команда</li></a>
+            <a href=''><li>Напрaвление</li></a>
+            <a href=''><li>Инструменты</li></a>
+            <a href=''><li>Клиенты</li></a>
+            <a href=''><li>Портфолио</li></a>
+            <a href=''><li>Язык</li></a>
+            <button>Связаться</button>
+          </ul>
+            </div>
+            </div>
+          
       </header>
+
+
+      <div className={sass.showcase}>
+           <div className={sass.container}>
+               <div className={sass.left}>
+               <Image
+                    src={logo}
+                    width={267}
+                    height={89}
+                    alt="logo"
+                    />
+                <h1>IT-Аутсорсинг Компания <br></br> <span>UI / UX дизайн|</span></h1>
+                <button>Связаться</button>
+               </div>
+               <div className={sass.right}>
+               <Image
+                    src={showcase}
+                    width={547}
+                    height={414}
+                    alt="logo"
+                    />
+               </div>
+           </div>
+      </div>
     
     </div>
   )
