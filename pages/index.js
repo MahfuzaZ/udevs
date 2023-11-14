@@ -3,8 +3,86 @@ import sass from '../styles/home.module.scss'
 import Image from 'next/image'
 import logo from '../public/logo.svg'
 import showcase from '../public/showcase.svg'
+import sec1 from '../public/sec1.svg'
+import sec2 from '../public/sec2.svg'
+import sec3 from '../public/sec3.svg'
+import sec4 from '../public/sec4.svg'
+import sec5 from '../public/sec5.svg'
+import sec6 from '../public/sec6.svg'
+import sec21 from '../public/sec21.svg'
+import sec31 from '../public/sec31.svg'
+import sec32 from '../public/sec32.svg'
+import sec33 from '../public/sec33.svg'
+import sec34 from '../public/sec34.svg'
+import sec35 from '../public/sec35.svg'
+import sec36 from '../public/sec36.svg'
+import sec37 from '../public/sec37.png'
+import back from '../public/background.png'
+import desktop from '../public/desktop.png'
+import sec41 from '../public/sec41.svg'
+import sec42 from '../public/sec42.svg'
+import sec43 from '../public/sec43.svg'
+import sec44 from '../public/sec44.svg'
+import sec45 from '../public/sec45.svg'
+import sec46 from '../public/sec46.svg'
+import sec51 from '../public/sec51.svg'
+import sec52 from '../public/sec52.svg'
+import sec53 from '../public/sec53.svg'
+import sec54 from '../public/sec54.svg'
+import sec55 from '../public/sec55.svg'
+import sec56 from '../public/sec56.svg'
+import sec57 from '../public/sec57.svg'
+import sec58 from '../public/sec58.svg'
+import sec59 from '../public/sec59.svg'
+import sec599 from '../public/sec599.svg'
+import sec61 from '../public/61.svg'
+import sec62 from '../public/62.svg'
+import sec63 from '../public/63.svg'
+import sec64 from '../public/64.svg'
+import sec65 from '../public/65.svg'
+import sec66 from '../public/66.svg'
+import sec67 from '../public/67.svg'
+import sec71 from '../public/sec7.svg'
+import sec72 from '../public/sec72.svg'
+import sec73 from '../public/sec73.svg'
+import sec74 from '../public/sec74.svg'
+import sec75 from '../public/sec75.svg'
+import sec76 from '../public/sec76.svg'
+import sec77 from '../public/sec77.svg'
+import sec88 from '../public/sec88.png'
+import sec8 from '../public/sec81.svg'
+import sec89 from '../public/sec71.svg'
+import sec82 from '../public/sec82.svg'
+import sec83 from '../public/sec83.svg'
+import sec84 from '../public/sec84.svg'
+import sec85 from '../public/sec85.svg'
+import sec9 from '../public/sec9.png'
+import goodzone from '../public/goodzone.png'
+import mac from '../public/mac.png'
+import mail from '../public/mail.svg'
+import ecom from '../public/e-com.svg'
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faBars,
+  faXmark,
+
+} from "@fortawesome/free-solid-svg-icons";
+import { useRef } from 'react'
+
+
+
+
+
 
 export default function Home() {
+  const check = useRef()
+  const toggle = ()=>{
+    // check.current.classList.toggle(sass.left)
+    check.current.classList.toggle(sass.dropdown)
+    console.log(true)
+  }
   return (
     <div className={sass.home}>
       <Head>
@@ -15,26 +93,55 @@ export default function Home() {
 
       <header>
            <div className={sass.container}>
-            <div className={sass.left}> 
-        <Image
-            src={logo}
-            width={96}
-            height={38}
-            alt="logo"
-    />
-            </div>
-             <div className={sass.right}>
-          <ul>
-            <a href=''><li>Услуги</li></a>
-            <a href=''><li>Команда</li></a>
-            <a href=''><li>Напрaвление</li></a>
-            <a href=''><li>Инструменты</li></a>
-            <a href=''><li>Клиенты</li></a>
-            <a href=''><li>Портфолио</li></a>
-            <a href=''><li>Язык</li></a>
-            <button>Связаться</button>
-          </ul>
-            </div>
+              <input type='checkbox' className={sass.checkbox} id='checkbox'></input>
+              <div className={sass.left}> 
+          <Image
+              src={logo}
+              width={96}
+              height={38}
+              alt="logo"
+      />
+              </div>
+              <div className={sass.right}>
+            <ul>
+              <a href=''><li>Услуги</li></a>
+              <a href=''><li>Команда</li></a>
+              <a href=''><li>Напрaвление</li></a>
+              <a href=''><li>Инструменты</li></a>
+              <a href=''><li>Клиенты</li></a>
+              <a href=''><li>Портфолио</li></a>
+              <a href=''><li>Язык</li></a>
+              <button>Связаться</button>
+            </ul>
+            <label className={sass.icon} htmlFor='checkbox'> 
+              <FontAwesomeIcon 
+                  icon={faBars}
+                  style={{ fontSize: 100, width: 20, color: "blue" }}
+                />
+            </label>
+              </div>
+              <div className={sass.dropdown}>
+              <div className={sass.top}>
+              <Image
+              src={logo}
+              width={96}
+              height={38}
+              alt="logo"
+      />
+                <label htmlFor='checkbox'>
+                  <FontAwesomeIcon
+                    icon={faXmark}
+                    style={{ fontSize: 100, width: 30, color: "blue" }}
+                  />
+                </label>
+              </div>
+              <ul>
+              <a href=''><li>Услуги</li></a>
+              <a href=''><li>Команда</li></a>
+              <a href=''><li>Клиенты</li></a>
+              <button>Связаться</button>
+            </ul>
+              </div>
             </div>
           
       </header>
@@ -62,6 +169,754 @@ export default function Home() {
                </div>
            </div>
       </div>
+
+
+      <section className={sass.section1}>
+         <div className={sass.container}>
+            <h1>Наши услуги</h1>
+            <div className={sass.cards}>
+                <div className={sass.card}>
+                <Image
+                    src={sec1}
+                    width={267}
+                    height={89}
+                    alt="sec1"
+                    />
+                <h3>Выделенная команда</h3>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec2}
+                    width={267}
+                    height={89}
+                    alt="sec1"
+                    />
+                <h3>Разработка мобильных приложений</h3>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec3}
+                    width={267}
+                    height={89}
+                    alt="sec1"
+                    />
+                <h3>Разработка и внедрение ERP систем</h3>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec4}
+                    width={267}
+                    height={89}
+                    alt="sec1"
+                    />
+                <h3>UI / UX дизайн</h3>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec5}
+                    width={267}
+                    height={89}
+                    alt="sec1"
+                    />
+                <h3>Оптимизация инфраструктуры</h3>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec6}
+                    width={267}
+                    height={89}
+                    alt="sec1"
+                    />
+                <h3>IT консалтинг</h3>
+                </div>
+            </div>
+         </div>
+      </section>
+
+      <section className={sass.section2}>
+        <div className={sass.container}>
+          <h1>Выделенная команда</h1>
+          <div className={sass.main}> 
+          <div className={sass.left}>
+            <p>Для каждого проекта мы формируем команду, в которую входят проект менеджер, бизнес-аналитик, UI/UX дизайнер, DevOps, QA-инженер, бэкенд и фронтенд разработчики</p>
+            <h2>100+</h2>
+            <h3>Сотрудников</h3>
+          </div>
+          <div className={sass.right}>
+          <Image
+                    src={sec21}
+                    width={267}
+                    height={89}
+                    alt="sec1"
+                    />
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={sass.section3}>
+        <div className={sass.container}>
+          <h1>Мобильная разработка</h1>
+          <div className={sass.main}> 
+          <div className={sass.left}>
+            <p>В сотрудничестве со стартапами мы научились создавать творческий и функциональный пользовательский интерфейс для мобильных приложений.</p>
+            <div className={sass.cards}>
+                <div className={sass.card}>
+                <Image
+                    src={sec31}
+                    alt="sec1"
+                    />
+                  <h5>iOS</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec32}
+                    alt="sec1"
+                    />
+                  <h5>Android</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec33}
+                    alt="sec1"
+                    />
+                  <h5>Crossplatform</h5>
+                </div>
+            </div>
+            <h3>Технологии</h3>
+            <div className={sass.mobile}>
+               <div className={sass.swift}>
+               <Image
+                    src={sec34}
+                    alt="sec1"
+                    />
+                <h6>Swift</h6>
+               </div>
+               <div className={sass.swift}>
+               <Image
+                    src={sec35}
+                    alt="sec1"
+                    />
+                <h6>Kotlin</h6>
+               </div>
+               <div className={sass.swift}>
+               <Image
+                    src={sec36}
+                    alt="sec1"
+                    />
+                <h6>Flutter</h6>
+               </div>
+            </div>
+          </div>
+          <div className={sass.right}>
+          <Image className={sass.img}
+                    src={sec37}
+                    alt="sec1"
+                    />
+            <Image className={sass.back}
+                    src={back}
+                    alt="sec1"
+                    />
+            
+          </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section className={sass.section4}>
+        <div className={sass.container}>
+           <h1>ERP cистемы</h1>
+           <div className={sass.main}>
+             <div className={sass.left}>
+             <Image className={sass.img}
+                    src={desktop}
+                    alt="sec1"
+                    />
+            <Image className={sass.back}
+                    src={back}
+                    alt="sec1"
+                    />
+             </div>
+             <div className={sass.right}>
+                <h4>IT Системы любого уровня сложности в удобные для вас сроки.</h4>
+                <div className={sass.cards2}>
+                <div className={sass.card}>
+                <Image
+                    src={sec41}
+                    alt="sec1"
+                    />
+                  <h5>CRM</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec42}
+                    alt="sec1"
+                    />
+                  <h5>eLearning</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec43}
+                    alt="sec1"
+                    />
+                  <h5>E-Commerce</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec44}
+                    alt="sec1"
+                    />
+                  <h5>POS</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec45}
+                    alt="sec1"
+                    />
+                  <h5>Sms / Emai</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec46}
+                    alt="sec1"
+                    />
+                  <h5>E-Warehouse</h5>
+                </div>
+                </div>
+             </div>
+           </div>
+        </div>
+      </section>
+
+
+      <section className={sass.section3}>
+        <div className={sass.container}>
+          <h1>UI / UX Дизайн</h1>
+          <div className={sass.main}> 
+          <div className={sass.left}>
+            <p>Наша компания придерживается подхода к дизайну, ориентированного на человека..</p>
+            <div className={sass.cards2}>
+                <div className={sass.card}>
+                <Image
+                    src={sec51}
+                    alt="sec1"
+                    />
+                  <h5>UX</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec52}
+                    alt="sec1"
+                    />
+                  <h5>UI</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec53}
+                    alt="sec1"
+                    />
+                  <h5>Prototyping</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec54}
+                    alt="sec1"
+                    />
+                  <h5>Mobile Design</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec55}
+                    alt="sec1"
+                    />
+                  <h5>Web Design</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec56}
+                    alt="sec1"
+                    />
+                  <h5>Atomic Design</h5>
+                </div>
+            </div>
+            <h3>Технологии</h3>
+            <div className={sass.mobile}>
+               <div className={sass.swift}>
+               <Image
+                    src={sec57}
+                    alt="sec1"
+                    />
+                <h6>Figma</h6>
+               </div>
+               <div className={sass.swift}>
+               <Image
+                    src={sec58}
+                    alt="sec1"
+                    />
+                <h6>Sketch</h6>
+               </div>
+               <div className={sass.swift}>
+               <Image
+                    src={sec59}
+                    alt="sec1"
+
+                    />
+                <h6>Lottie</h6>
+               </div>
+               <div className={sass.swift}>
+               <Image
+                    src={sec599}
+                    alt="sec1"
+                    />
+                <h6>Illustrator</h6>
+               </div>
+            </div>
+          </div>
+          <div className={sass.right}>
+          <Image className={sass.img}
+                    src={sec37}
+                    alt="sec1"
+                    />
+            <Image className={sass.back}
+                    src={back}
+                    alt="sec1"
+                    />
+            
+          </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section className={sass.section6}>
+        <div className={sass.container}>
+           <h1>Оптимизация <br/> инфраструктуры</h1>
+           <div className={sass.main}>
+             <div className={sass.left}>
+             <Image className={sass.img}
+                    src={desktop}
+                    alt="sec1"
+                    />
+            <Image className={sass.back}
+                    src={back}
+                    alt="sec1"
+                    />
+             </div>
+             <div className={sass.right}>
+                <h4>Наши опытные специалисты помогут оптимизировать вашу инфраструктуру.</h4>
+                <div className={sass.cards2}>
+                <div className={sass.card}>
+                <Image
+                    src={sec61}
+                    alt="sec61"
+                    />
+                  <h5>Architecture</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec62}
+                    alt="sec1"
+                    />
+                  <h5>Auto testing</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec63}
+                    alt="sec1"
+                    />
+                  <h5>Stress testing</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec64}
+                    alt="sec1"
+                    />
+                  <h5>Load testing</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec65}
+                    alt="sec1"
+                    />
+                  <h5>Devops</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec66}
+                    alt="sec1"
+                    />
+                  <h5>Cloud</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec67}
+                    alt="sec1"
+                    />
+                  <h5>CI / CD</h5>
+                </div>
+                </div>
+             </div>
+           </div>
+        </div>
+      </section>
+
+
+      <section className={sass.section3}>
+        <div className={sass.container}>
+          <h1>IT консалтинг</h1>
+          <div className={sass.main}> 
+          <div className={sass.left}>
+            <p>Мы можем повысить квалификацию ваших сотрудников тем самым увеличить эффективность вашей компании.</p>
+            <div className={sass.cards2}>
+                <div className={sass.card}>
+                <Image
+                    src={sec71}
+                    alt="sec1"
+                    />
+                  <h5>Frontend</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec72}
+                    alt="sec1"
+                    />
+                  <h5>Backend</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec73}
+                    alt="sec1"
+                    />
+                  <h5>Architecture</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec74}
+                    alt="sec1"
+                    />
+                  <h5>DevOps</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec75}
+                    alt="sec1"
+                    />
+                  <h5>UX/UI</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec76}
+                    alt="sec1"
+                    />
+                  <h5>QA</h5>
+                </div>
+            </div>
+
+          </div>
+          <div className={sass.right}>
+          <Image className={sass.sec7}
+                    src={sec77}
+                    alt="sec1"
+                    />
+            
+          </div>
+          </div>
+        </div>
+      </section>
+
+
+     
+
+      <section className={sass.section7}>
+        <div className={sass.container}>
+           <div className={sass.top}>
+           <h1>Delever</h1>
+             <button>
+             <Image
+                    src={sec89}
+                    alt="sec1"
+                    />
+                Delivery
+             </button>
+           </div>
+           <div className={sass.main}>
+             <div className={sass.left}>
+             <Image className={sass.img}
+                    src={sec88}
+                    alt="sec1"
+                    />
+
+             </div>
+             <div className={sass.right}>
+             <h1>Delever</h1>
+             <button>
+             <Image
+                    src={sec89}
+                    alt="sec1"
+                    />
+                Delivery
+             </button>
+                <h4>Delever - Delivery service automation targeted at both consumers and restaurants.</h4>
+                <h3>Мы разрабатывали:</h3>
+                <div className={sass.cards2}>
+                <div className={sass.card}>
+                <Image
+                    src={sec8}
+                    alt="sec1"
+                    />
+                  <h5>Website</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec82}
+                    alt="sec1"
+                    />
+                  <h5>Admin panel</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec83}
+                    alt="sec1"
+                    />
+                  <h5>Crossplatform</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec84}
+                    alt="sec1"
+                    />
+                  <h5>Web design</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec85}
+                    alt="sec1"
+                    />
+                  <h5>Mobile design</h5>
+                </div>
+                </div>
+             </div>
+           </div>
+        </div>
+      </section>
+
+
+      <section className={sass.section8}>
+        <div className={sass.container}>
+          <div className={sass.top}>  
+          <h1>Smsuz.uz</h1>
+          <button>
+          <Image className={sass.img}
+                    src={mail}
+                    alt="sec1"
+                    />
+            Notification
+              
+          </button>
+
+          </div>
+           <div className={sass.main}>
+           <div className={sass.right}>
+                <h1>Smsuz.uz</h1>
+                <button>
+          <Image className={sass.img}
+                    src={mail}
+                    alt="sec1"
+                    />
+            Notification
+              
+          </button>
+
+                <h4>Smsuz.uz - It is a platform for bulk SMS messaging.</h4>
+                <h3>Мы разрабатывали:</h3>
+                <div className={sass.cards2}>
+                <div className={sass.card}>
+                <Image
+                    src={sec41}
+                    alt="sec1"
+                    />
+                  <h5>CRM</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec42}
+                    alt="sec1"
+                    />
+                  <h5>eLearning</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec43}
+                    alt="sec1"
+                    />
+                  <h5>E-Commerce</h5>
+                </div>
+                </div>
+             </div>
+             <div className={sass.left}>
+             <Image className={sass.img}
+                    src={sec9}
+                    alt="sec1"
+                    />
+             </div>
+           </div>
+        </div>
+      </section>
+
+
+      <section className={sass.section7}>
+        <div className={sass.container}>
+           <div className={sass.top}>
+           <Image
+                    src={goodzone}
+                    alt="sec1"
+                    />
+             <button>
+             <Image
+                    src={ecom}
+                    alt="sec1"
+                    />
+                E-commerce
+             </button>
+           </div>
+           <div className={sass.main}>
+             <div className={sass.left}>
+             <Image className={sass.img}
+                    src={mac}
+                    alt="sec1"
+                    />
+
+             </div>
+             <div className={sass.right}>
+             <Image className={sass.goodzone}
+                    src={goodzone}
+                    alt="sec1"
+                    />
+             <button>
+             <Image
+                    src={ecom}
+                    alt="sec1"
+                    />
+                 E-commerce
+             </button>
+                <h4>Delever - Delivery service automation targeted at both consumers and restaurants.</h4>
+                <h3>Мы разрабатывали:</h3>
+                <div className={sass.cards2}>
+                <div className={sass.card}>
+                <Image
+                    src={sec8}
+                    alt="sec1"
+                    />
+                  <h5>Website</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec82}
+                    alt="sec1"
+                    />
+                  <h5>Admin panel</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec83}
+                    alt="sec1"
+                    />
+                  <h5>Crossplatform</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec84}
+                    alt="sec1"
+                    />
+                  <h5>Web design</h5>
+                </div>
+                <div className={sass.card}>
+                <Image
+                    src={sec85}
+                    alt="sec1"
+                    />
+                  <h5>Mobile design</h5>
+                </div>
+                </div>
+             </div>
+           </div>
+        </div>
+      </section>
+
+
+      <footer>
+        <div className={sass.container}>
+          <div className={sass.logo}>
+            <Image src={logo} width={96} height={38} alt="logo" />
+          </div>
+
+          <div className={sass.main}>
+            <ul>
+              <a href="">
+                <li className={sass.active}>About us</li>
+              </a>
+              <a href="">
+                <li>Direction</li>
+              </a>
+              <a href="">
+                <li>Command</li>
+              </a>
+              <a href="">
+                <li>Tools</li>
+              </a>
+              <a href="">
+                <li>Clients</li>
+              </a>
+            </ul>
+
+            <ul>
+              <a href="">
+                <li className={sass.active}>Services</li>
+              </a>
+              <a href="">
+                <li>Development of mobile applications</li>
+              </a>
+              <a href="">
+                <li>Development and implementation ERP systems</li>
+              </a>
+              <a href="">
+                <li>User interface, User experience design</li>
+              </a>
+              <a href="">
+                <li>IT consulting</li>
+              </a>
+              <a href="">
+                <li>Optimization IT consulting infrastructure</li>
+              </a>
+            </ul>
+
+            <ul>
+              <a href="">
+                <li className={sass.active}>Portfolio</li>
+              </a>
+              <a href="">
+                <li>Delever</li>
+              </a>
+              <a href="">
+                <li>Sms.uz</li>
+              </a>
+              <a href="">
+                <li>Goodzone</li>
+              </a>
+              <a href="">
+                <li>Iman</li>
+              </a>
+            </ul>
+          </div>
+
+          <div className={sass.border}></div>
+
+          <div className={sass.bottom}>
+             <h4>© 2023 Udevs. All rights reserved</h4>
+          </div>
+        </div>
+      </footer>
     
     </div>
   )
